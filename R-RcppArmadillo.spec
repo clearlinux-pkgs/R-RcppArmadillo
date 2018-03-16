@@ -703,5 +703,4 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/R/library/RcppArmadillo/libs/RcppArmadillo.so
-/usr/lib64/R/library/RcppArmadillo/libs/RcppArmadillo.so.avx2
-/usr/lib64/R/library/RcppArmadillo/libs/RcppArmadillo.so.avx512
+/usr/lib64/R/library/RcppArmadillo/libs/RcppArmadillo.so.avx*
