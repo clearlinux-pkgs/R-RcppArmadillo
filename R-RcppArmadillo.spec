@@ -14,6 +14,7 @@ Requires: R-RcppArmadillo-lib
 Requires: R-Rcpp
 BuildRequires : R-RUnit
 BuildRequires : R-Rcpp
+BuildRequires : openblas
 BuildRequires : clr-R-helpers
 
 %description
