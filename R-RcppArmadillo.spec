@@ -4,14 +4,13 @@
 #
 Name     : R-RcppArmadillo
 Version  : 0.9.100.5.0
-Release  : 34
+Release  : 35
 URL      : https://cran.r-project.org/src/contrib/RcppArmadillo_0.9.100.5.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/RcppArmadillo_0.9.100.5.0.tar.gz
 Summary  : 'Rcpp' Integration for the 'Armadillo' Templated Linear Algebra
 Group    : Development/Tools
 License  : Apache-2.0 GPL-2.0+
 Requires: R-RcppArmadillo-lib
-Requires: R-Rcpp
 BuildRequires : R-Rcpp
 BuildRequires : buildreq-R
 BuildRequires : openblas
@@ -47,11 +46,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1534472484
+export SOURCE_DATE_EPOCH=1534524156
 
 %install
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1534472484
+export SOURCE_DATE_EPOCH=1534524156
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
