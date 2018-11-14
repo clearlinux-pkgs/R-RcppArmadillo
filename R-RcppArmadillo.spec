@@ -4,7 +4,7 @@
 #
 Name     : R-RcppArmadillo
 Version  : 0.9.200.4.0
-Release  : 77
+Release  : 78
 URL      : https://cran.r-project.org/src/contrib/RcppArmadillo_0.9.200.4.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/RcppArmadillo_0.9.200.4.0.tar.gz
 Summary  : 'Rcpp' Integration for the 'Armadillo' Templated Linear Algebra
@@ -46,10 +46,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1542211883
+export SOURCE_DATE_EPOCH=1542215826
 
 %install
-export SOURCE_DATE_EPOCH=1542211883
+export SOURCE_DATE_EPOCH=1542215826
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -728,4 +728,3 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 %defattr(-,root,root,-)
 /usr/lib64/R/library/RcppArmadillo/libs/RcppArmadillo.so
 /usr/lib64/R/library/RcppArmadillo/libs/RcppArmadillo.so.avx2
-/usr/lib64/R/library/RcppArmadillo/libs/RcppArmadillo.so.avx512
