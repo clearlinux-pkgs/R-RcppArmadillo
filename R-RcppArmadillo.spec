@@ -4,7 +4,7 @@
 #
 Name     : R-RcppArmadillo
 Version  : 0.9.500.2.0
-Release  : 95
+Release  : 96
 URL      : https://cran.r-project.org/src/contrib/RcppArmadillo_0.9.500.2.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/RcppArmadillo_0.9.500.2.0.tar.gz
 Summary  : 'Rcpp' Integration for the 'Armadillo' Templated Linear Algebra
@@ -12,12 +12,25 @@ Group    : Development/Tools
 License  : Apache-2.0 GPL-2.0+
 Requires: R-RcppArmadillo-lib = %{version}-%{release}
 Requires: armadillo
+BuildRequires : R-Rcpp
 BuildRequires : armadillo
 BuildRequires : buildreq-R
 BuildRequires : openblas
 
 %description
-## RcppArmadillo [![Build Status](https://travis-ci.org/RcppCore/RcppArmadillo.svg)](https://travis-ci.org/RcppCore/RcppArmadillo) [![License](https://eddelbuettel.github.io/badges/GPL2+.svg)](https://www.gnu.org/licenses/gpl-2.0.html) [![CRAN](https://www.r-pkg.org/badges/version/RcppArmadillo)](https://cran.r-project.org/package=RcppArmadillo) [![Dependencies](https://tinyverse.netlify.com/badge/RcppArmadillo)](https://cran.r-project.org/package=RcppArmadillo) [![Downloads](https://cranlogs.r-pkg.org/badges/RcppArmadillo?color=brightgreen)](https://www.r-pkg.org/pkg/RcppArmadillo)
+Sanderson) that aims towards a good balance between speed and ease of use. Integer,
+ floating point and complex numbers are supported, as well as a subset of
+ trigonometric and statistics functions. Various matrix decompositions are
+ provided through optional integration with LAPACK and ATLAS libraries.
+ The 'RcppArmadillo' package includes the header files from the templated
+ 'Armadillo' library. Thus users do not need to install 'Armadillo' itself in
+ order to use 'RcppArmadillo'. From release 7.800.0 on, 'Armadillo' is
+ licensed under Apache License 2; previous releases were under licensed as
+ MPL 2.0 from version 3.800.0 onwards and LGPL-3 prior to that;
+ 'RcppArmadillo' (the 'Rcpp' bindings/bridge to Armadillo) is licensed under
+ the GNU GPL version 2 or later, as is the rest of 'Rcpp'. Note that
+ Armadillo requires a fairly recent compiler; for the g++ family at least
+ version 4.6.* is required.
 
 %package lib
 Summary: lib components for the R-RcppArmadillo package.
@@ -35,10 +48,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1560355065
+export SOURCE_DATE_EPOCH=1561773337
 
 %install
-export SOURCE_DATE_EPOCH=1560355065
+export SOURCE_DATE_EPOCH=1561773337
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
