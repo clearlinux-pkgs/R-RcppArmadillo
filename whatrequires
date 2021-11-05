@@ -2,6 +2,7 @@
 R-Amelia
 R-Luminescence
 R-bayesm
+R-coneproj
 R-conquer
 R-dcurver
 R-etm
@@ -10,4 +11,5 @@ R-joineRML
 R-mirt
 R-mvnfast
 R-projpred
+R-robustHD
 R-rstpm2
