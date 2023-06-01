@@ -4,10 +4,10 @@
 # Using build pattern: R
 #
 Name     : R-RcppArmadillo
-Version  : 0.12.2.0.0
-Release  : 159
-URL      : https://cran.r-project.org/src/contrib/RcppArmadillo_0.12.2.0.0.tar.gz
-Source0  : https://cran.r-project.org/src/contrib/RcppArmadillo_0.12.2.0.0.tar.gz
+Version  : 0.12.4.0.0
+Release  : 160
+URL      : https://cran.r-project.org/src/contrib/RcppArmadillo_0.12.4.0.0.tar.gz
+Source0  : https://cran.r-project.org/src/contrib/RcppArmadillo_0.12.4.0.0.tar.gz
 Summary  : 'Rcpp' Integration for the 'Armadillo' Templated Linear Algebra
 Group    : Development/Tools
 License  : Apache-2.0 GPL-2.0+
@@ -55,16 +55,19 @@ license components for the R-RcppArmadillo package.
 
 %prep
 %setup -q -n RcppArmadillo
+pushd ..
+cp -a RcppArmadillo buildavx2
+popd
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1680795317
+export SOURCE_DATE_EPOCH=1685646861
 
 %install
-export SOURCE_DATE_EPOCH=1680795317
+export SOURCE_DATE_EPOCH=1685646861
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/R-RcppArmadillo
 cp %{_builddir}/RcppArmadillo/inst/COPYRIGHTS %{buildroot}/usr/share/package-licenses/R-RcppArmadillo/7ee2a62c312ede60ca472ccde237611b34d0ac60 || :
@@ -96,6 +99,7 @@ echo "CXXFLAGS = $CXXFLAGS -ftree-vectorize " >> ~/.R/Makevars
 R CMD INSTALL --preclean --use-LTO --install-tests --data-compress=none --compress=none --built-timestamp=${SOURCE_DATE_EPOCH} --build  -l %{buildroot}/usr/lib64/R/library .
 cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 %{__rm} -rf %{buildroot}%{_datadir}/R/library/R.css
+/usr/bin/elf-move.py avx2 %{buildroot}-v3 %{buildroot} %{buildroot}/usr/share/clear/filemap/filemap-%{name}
 
 %files
 %defattr(-,root,root,-)
@@ -409,6 +413,7 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/RcppArmadillo/include/armadillo_bits/fn_trunc_log.hpp
 /usr/lib64/R/library/RcppArmadillo/include/armadillo_bits/fn_unique.hpp
 /usr/lib64/R/library/RcppArmadillo/include/armadillo_bits/fn_var.hpp
+/usr/lib64/R/library/RcppArmadillo/include/armadillo_bits/fn_vecnorm.hpp
 /usr/lib64/R/library/RcppArmadillo/include/armadillo_bits/fn_vectorise.hpp
 /usr/lib64/R/library/RcppArmadillo/include/armadillo_bits/fn_wishrnd.hpp
 /usr/lib64/R/library/RcppArmadillo/include/armadillo_bits/fn_zeros.hpp
@@ -590,6 +595,8 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/RcppArmadillo/include/armadillo_bits/op_misc_meat.hpp
 /usr/lib64/R/library/RcppArmadillo/include/armadillo_bits/op_nonzeros_bones.hpp
 /usr/lib64/R/library/RcppArmadillo/include/armadillo_bits/op_nonzeros_meat.hpp
+/usr/lib64/R/library/RcppArmadillo/include/armadillo_bits/op_norm2est_bones.hpp
+/usr/lib64/R/library/RcppArmadillo/include/armadillo_bits/op_norm2est_meat.hpp
 /usr/lib64/R/library/RcppArmadillo/include/armadillo_bits/op_norm_bones.hpp
 /usr/lib64/R/library/RcppArmadillo/include/armadillo_bits/op_norm_meat.hpp
 /usr/lib64/R/library/RcppArmadillo/include/armadillo_bits/op_normalise_bones.hpp
@@ -656,6 +663,8 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/RcppArmadillo/include/armadillo_bits/op_unique_meat.hpp
 /usr/lib64/R/library/RcppArmadillo/include/armadillo_bits/op_var_bones.hpp
 /usr/lib64/R/library/RcppArmadillo/include/armadillo_bits/op_var_meat.hpp
+/usr/lib64/R/library/RcppArmadillo/include/armadillo_bits/op_vecnorm_bones.hpp
+/usr/lib64/R/library/RcppArmadillo/include/armadillo_bits/op_vecnorm_meat.hpp
 /usr/lib64/R/library/RcppArmadillo/include/armadillo_bits/op_vectorise_bones.hpp
 /usr/lib64/R/library/RcppArmadillo/include/armadillo_bits/op_vectorise_meat.hpp
 /usr/lib64/R/library/RcppArmadillo/include/armadillo_bits/op_wishrnd_bones.hpp
@@ -736,6 +745,8 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/RcppArmadillo/include/armadillo_bits/spop_trimat_meat.hpp
 /usr/lib64/R/library/RcppArmadillo/include/armadillo_bits/spop_var_bones.hpp
 /usr/lib64/R/library/RcppArmadillo/include/armadillo_bits/spop_var_meat.hpp
+/usr/lib64/R/library/RcppArmadillo/include/armadillo_bits/spop_vecnorm_bones.hpp
+/usr/lib64/R/library/RcppArmadillo/include/armadillo_bits/spop_vecnorm_meat.hpp
 /usr/lib64/R/library/RcppArmadillo/include/armadillo_bits/spop_vectorise_bones.hpp
 /usr/lib64/R/library/RcppArmadillo/include/armadillo_bits/spop_vectorise_meat.hpp
 /usr/lib64/R/library/RcppArmadillo/include/armadillo_bits/spsolve_factoriser_bones.hpp
