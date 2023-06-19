@@ -1,5 +1,5 @@
 PKG_NAME := R-RcppArmadillo
-URL = https://cran.r-project.org/src/contrib/RcppArmadillo_0.12.4.0.0.tar.gz
+URL = https://cran.r-project.org/src/contrib/RcppArmadillo_0.12.4.1.0.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
