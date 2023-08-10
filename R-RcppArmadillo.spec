@@ -4,10 +4,10 @@
 # Using build pattern: R
 #
 Name     : R-RcppArmadillo
-Version  : 0.12.4.1.0
-Release  : 162
-URL      : https://cran.r-project.org/src/contrib/RcppArmadillo_0.12.4.1.0.tar.gz
-Source0  : https://cran.r-project.org/src/contrib/RcppArmadillo_0.12.4.1.0.tar.gz
+Version  : 0.12.6.1.0
+Release  : 163
+URL      : https://cran.r-project.org/src/contrib/RcppArmadillo_0.12.6.1.0.tar.gz
+Source0  : https://cran.r-project.org/src/contrib/RcppArmadillo_0.12.6.1.0.tar.gz
 Summary  : 'Rcpp' Integration for the 'Armadillo' Templated Linear Algebra
 Group    : Development/Tools
 License  : Apache-2.0 GPL-2.0+
@@ -64,10 +64,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1687190807
+export SOURCE_DATE_EPOCH=1691686001
 
 %install
-export SOURCE_DATE_EPOCH=1687190807
+export SOURCE_DATE_EPOCH=1691686001
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/R-RcppArmadillo
 cp %{_builddir}/RcppArmadillo/inst/COPYRIGHTS %{buildroot}/usr/share/package-licenses/R-RcppArmadillo/7ee2a62c312ede60ca472ccde237611b34d0ac60 || :
@@ -228,6 +228,8 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/RcppArmadillo/include/armadillo_bits/SpSubview_col_list_meat.hpp
 /usr/lib64/R/library/RcppArmadillo/include/armadillo_bits/SpSubview_iterators_meat.hpp
 /usr/lib64/R/library/RcppArmadillo/include/armadillo_bits/SpSubview_meat.hpp
+/usr/lib64/R/library/RcppArmadillo/include/armadillo_bits/SpToDGlue_bones.hpp
+/usr/lib64/R/library/RcppArmadillo/include/armadillo_bits/SpToDGlue_meat.hpp
 /usr/lib64/R/library/RcppArmadillo/include/armadillo_bits/SpToDOp_bones.hpp
 /usr/lib64/R/library/RcppArmadillo/include/armadillo_bits/SpToDOp_meat.hpp
 /usr/lib64/R/library/RcppArmadillo/include/armadillo_bits/SpValProxy_bones.hpp
@@ -307,6 +309,7 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/RcppArmadillo/include/armadillo_bits/fn_cumsum.hpp
 /usr/lib64/R/library/RcppArmadillo/include/armadillo_bits/fn_det.hpp
 /usr/lib64/R/library/RcppArmadillo/include/armadillo_bits/fn_diagmat.hpp
+/usr/lib64/R/library/RcppArmadillo/include/armadillo_bits/fn_diags_spdiags.hpp
 /usr/lib64/R/library/RcppArmadillo/include/armadillo_bits/fn_diagvec.hpp
 /usr/lib64/R/library/RcppArmadillo/include/armadillo_bits/fn_diff.hpp
 /usr/lib64/R/library/RcppArmadillo/include/armadillo_bits/fn_dot.hpp
@@ -463,6 +466,8 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/RcppArmadillo/include/armadillo_bits/glue_solve_meat.hpp
 /usr/lib64/R/library/RcppArmadillo/include/armadillo_bits/glue_times_bones.hpp
 /usr/lib64/R/library/RcppArmadillo/include/armadillo_bits/glue_times_meat.hpp
+/usr/lib64/R/library/RcppArmadillo/include/armadillo_bits/glue_times_misc_bones.hpp
+/usr/lib64/R/library/RcppArmadillo/include/armadillo_bits/glue_times_misc_meat.hpp
 /usr/lib64/R/library/RcppArmadillo/include/armadillo_bits/glue_toeplitz_bones.hpp
 /usr/lib64/R/library/RcppArmadillo/include/armadillo_bits/glue_toeplitz_meat.hpp
 /usr/lib64/R/library/RcppArmadillo/include/armadillo_bits/glue_trapz_bones.hpp
