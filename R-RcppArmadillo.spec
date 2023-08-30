@@ -4,10 +4,10 @@
 # Using build pattern: R
 #
 Name     : R-RcppArmadillo
-Version  : 0.12.6.1.0
-Release  : 163
-URL      : https://cran.r-project.org/src/contrib/RcppArmadillo_0.12.6.1.0.tar.gz
-Source0  : https://cran.r-project.org/src/contrib/RcppArmadillo_0.12.6.1.0.tar.gz
+Version  : 0.12.6.3.0
+Release  : 164
+URL      : https://cran.r-project.org/src/contrib/RcppArmadillo_0.12.6.3.0.tar.gz
+Source0  : https://cran.r-project.org/src/contrib/RcppArmadillo_0.12.6.3.0.tar.gz
 Summary  : 'Rcpp' Integration for the 'Armadillo' Templated Linear Algebra
 Group    : Development/Tools
 License  : Apache-2.0 GPL-2.0+
@@ -64,10 +64,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1691686001
+export SOURCE_DATE_EPOCH=1693412434
 
 %install
-export SOURCE_DATE_EPOCH=1691686001
+export SOURCE_DATE_EPOCH=1693412434
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/R-RcppArmadillo
 cp %{_builddir}/RcppArmadillo/inst/COPYRIGHTS %{buildroot}/usr/share/package-licenses/R-RcppArmadillo/7ee2a62c312ede60ca472ccde237611b34d0ac60 || :
