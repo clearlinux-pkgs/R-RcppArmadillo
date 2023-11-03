@@ -7,7 +7,7 @@
 #
 Name     : R-RcppArmadillo
 Version  : 0.12.6.6.0
-Release  : 166
+Release  : 167
 URL      : https://cran.r-project.org/src/contrib/RcppArmadillo_0.12.6.6.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/RcppArmadillo_0.12.6.6.0.tar.gz
 Summary  : 'Rcpp' Integration for the 'Armadillo' Templated Linear Algebra
