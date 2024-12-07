@@ -6,10 +6,10 @@
 # autospec commit: 5424026
 #
 Name     : R-RcppArmadillo
-Version  : 14.2.0.1
-Release  : 179
-URL      : https://ftp.osuosl.org/pub/cran/src/contrib/RcppArmadillo_14.2.0-1.tar.gz
-Source0  : https://ftp.osuosl.org/pub/cran/src/contrib/RcppArmadillo_14.2.0-1.tar.gz
+Version  : 14.2.2.1
+Release  : 180
+URL      : https://ftp.osuosl.org/pub/cran/src/contrib/RcppArmadillo_14.2.2-1.tar.gz
+Source0  : https://ftp.osuosl.org/pub/cran/src/contrib/RcppArmadillo_14.2.2-1.tar.gz
 Summary  : 'Rcpp' Integration for the 'Armadillo' Templated Linear Algebra
 Group    : Development/Tools
 License  : Apache-2.0 GPL-2.0+
@@ -84,10 +84,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1732038739
+export SOURCE_DATE_EPOCH=1733581997
 
 %install
-export SOURCE_DATE_EPOCH=1732038739
+export SOURCE_DATE_EPOCH=1733581997
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/R-RcppArmadillo
 cp %{_builddir}/RcppArmadillo/inst/COPYRIGHTS %{buildroot}/usr/share/package-licenses/R-RcppArmadillo/7ee2a62c312ede60ca472ccde237611b34d0ac60 || :
