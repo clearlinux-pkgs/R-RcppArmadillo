@@ -1,6 +1,7 @@
 # This file contains recursive sources that require this package
 R-Amelia
 R-Luminescence
+R-Rsolnp
 R-ade4
 R-bayesm
 R-coneproj
